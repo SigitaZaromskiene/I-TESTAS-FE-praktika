@@ -130,8 +130,13 @@ body {
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  justify-content: center;
+  align-items: center;
   gap: 40px;
+}
+
+.pages-logo,
+.pages {
+  width: 100%;
 }
 
 .btn-learn-more {
@@ -216,8 +221,9 @@ footer {
     justify-items: center;
   }
 
-  .empty-space {
-    display: block;
+  .pages-logo,
+  .pages {
+    width: 80%;
   }
 }
 
@@ -253,12 +259,6 @@ footer {
     margin-bottom: 20px;
   }
 
-  .margin-bottom {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
   .empty-space {
     display: none;
   }
@@ -292,6 +292,18 @@ footer {
 
   .hero-right {
     text-align: left;
+  }
+}
+
+@media (max-width: 610px) {
+  .margin-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .pages-logo,
+  .pages {
+    width: 50%;
   }
 }
 
