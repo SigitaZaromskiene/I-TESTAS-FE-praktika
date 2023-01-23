@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .green-background {
@@ -34,7 +34,7 @@ body {
 }
 
 .logo-p {
-  font-size: 46px;
+  font-size: 40px;
   color: white;
   font-weight: 500;
 }
@@ -126,22 +126,12 @@ body {
   margin-bottom: 50px;
 }
 
-.pages-logo {
-  height: 50px;
-  width: 150px;
-}
-
-.pages {
-  height: 40px;
-  width: 200px;
-}
-
 .margin-bottom {
-  margin-bottom: 50px;
-  display: flex;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
-  align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .btn-learn-more {
@@ -154,6 +144,10 @@ body {
 }
 
 .hidden {
+  display: none;
+}
+
+.empty-space {
   display: none;
 }
 
@@ -203,7 +197,6 @@ footer {
   }
 
   .hero img {
-    height: 100%;
     padding-top: 20px;
   }
 
@@ -212,19 +205,19 @@ footer {
   }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1080px) {
   .container {
     padding: 40px 50px;
   }
 
-  .pages-logo {
-    height: 40px;
-    width: 140px;
+  .margin-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
   }
 
-  .pages {
-    height: 30px;
-    width: 180px;
+  .empty-space {
+    display: block;
   }
 }
 
@@ -237,24 +230,10 @@ footer {
   .logo-p {
     font-size: 36px;
   }
-  .pages-logo {
-    height: 40px;
-    width: 110px;
-  }
-
-  .pages {
-    height: 30px;
-    width: 150px;
-  }
 
   .margin-bottom {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     gap: 30px;
-  }
-
-  .hero img {
-    height: 350px;
-    width: 430px;
   }
 }
 
@@ -273,15 +252,19 @@ footer {
   .nav-flex {
     margin-bottom: 20px;
   }
-}
 
-@media (max-width: 750px) {
   .margin-bottom {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
+  .empty-space {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
   .a-gap {
     gap: 15px;
   }
@@ -315,6 +298,16 @@ footer {
 @media (max-width: 580px) {
   .section-p {
     width: 400px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero img {
+    width: 450px;
+  }
+
+  .hero-right {
+    padding: 20px;
   }
 }
 
@@ -381,5 +374,13 @@ footer {
 
   .btn-learn-more {
     margin-bottom: 60px;
+  }
+
+  .hero {
+    gap: 10px;
+  }
+
+  .hero-right .subtitle {
+    margin-top: 5px;
   }
 }
