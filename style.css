@@ -19,16 +19,18 @@ body {
   padding: 40px 120px;
 }
 
+/* NAVIGATION */
 .nav-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .green-background {
   background-color: var(--main-color);
   padding-bottom: 40px;
+  width: 100%;
 }
 
 .logo-p {
@@ -59,9 +61,10 @@ body {
   gap: 25px;
 }
 
+/* HERO */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
   gap: 100px;
 }
 
@@ -74,6 +77,8 @@ body {
   letter-spacing: 4px;
   font-size: 16px;
 }
+
+/* SECTION */
 
 .title-sans {
   color: white;
@@ -118,6 +123,7 @@ body {
   letter-spacing: 1.5px;
   display: inline-block;
   width: 500px;
+  margin-bottom: 50px;
 }
 
 .pages-logo {
@@ -130,11 +136,12 @@ body {
   width: 200px;
 }
 
-.gap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.margin-bottom {
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .btn-learn-more {
@@ -146,15 +153,233 @@ body {
   margin-bottom: 40px;
 }
 
-.footer-right {
-  height: 60px;
+.hidden {
+  display: none;
 }
 
-.socials {
-  height: 24px;
-  width: 24px;
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.fa {
-  height: 20px;
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.footer-socials a {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-p {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1330px) {
+  .hero img {
+    width: 500px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 40px 80px;
+  }
+
+  .hero img {
+    height: 100%;
+    padding-top: 20px;
+  }
+
+  .hero {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .container {
+    padding: 40px 50px;
+  }
+
+  .pages-logo {
+    height: 40px;
+    width: 140px;
+  }
+
+  .pages {
+    height: 30px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 970px) {
+  .logo-flex img {
+    height: 30px;
+    width: 50px;
+  }
+
+  .logo-p {
+    font-size: 36px;
+  }
+  .pages-logo {
+    height: 40px;
+    width: 110px;
+  }
+
+  .pages {
+    height: 30px;
+    width: 150px;
+  }
+
+  .margin-bottom {
+    margin-bottom: 60px;
+    gap: 30px;
+  }
+
+  .hero img {
+    height: 350px;
+    width: 430px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: grid;
+    justify-items: center;
+  }
+
+  .hero-right {
+    text-align: center;
+    margin-top: 20px;
+    order: 1;
+  }
+
+  .nav-flex {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .margin-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .a-gap {
+    gap: 15px;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-socials {
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+@media (max-width: 670px) {
+  .a-gap {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    height: 24px;
+  }
+
+  .hero-right {
+    text-align: left;
+  }
+}
+
+@media (max-width: 580px) {
+  .section-p {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-p {
+    width: 300px;
+  }
+
+  .hero-right {
+    margin-top: 0px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .green {
+    margin-top: 0px;
+  }
+
+  .green-background {
+    padding-bottom: 1px;
+  }
+
+  .footer-p {
+    margin-bottom: 20px;
+  }
+
+  .title-sans {
+    font-size: 30px;
+  }
+
+  .hero-right {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    padding: 20px 20px;
+  }
+  .section-p {
+    width: 100%;
+  }
+
+  .hero img {
+    height: 270px;
+    width: 350px;
+  }
+
+  .hero-right {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .title-sans {
+    font-size: 24px;
+  }
+
+  .section-p {
+    font-size: 20px;
+  }
+
+  .btn-learn-more {
+    margin-bottom: 60px;
+  }
 }
